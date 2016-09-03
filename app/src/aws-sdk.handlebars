@@ -112,6 +112,9 @@ declare module "aws-sdk" {
 
   export class CognitoIdentityCredentials extends Credentials {
     constructor(params: CognitoIdentity.CognitoIdentityCredentialsParams);
+
+    identityId: string;
+    get(callback: (err?: Error, data?: any) => void): void;
   }
 
   export class Request<R,E> extends EventEmitter {
